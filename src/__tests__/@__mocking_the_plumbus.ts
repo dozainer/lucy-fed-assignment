@@ -4,6 +4,7 @@ import { start } from "../__mocks__/RickAndMortyApi.mock";
 
 beforeAll(async () => {
   /* using this opportunity to mock the rick and morty api */
+  /**/
   console.info("Trying to mock a plumbus");
 
   activate();
