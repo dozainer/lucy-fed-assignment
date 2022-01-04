@@ -1,0 +1,122 @@
+body {
+  background-color: #efefef;
+}
+
+button {
+  background-color: #22aabb;
+  border: 2px solid transparent;
+  padding: 8px 20px;
+  margin: 1px 10px;
+  border-radius: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  border: 2px solid #000;
+}
+button.fail {
+  background-color: #9900cc;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: #444;
+}
+
+h1 {
+  font-family: "Shizuru";
+  font-size: 40px;
+  color: #22aabb;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, max-content));
+  grid-gap: 1rem;
+  padding: initial;
+  justify-content: center;
+  margin: 0 auto;
+}
+.list__card {
+  background-color: #fff;
+  margin: 1rem;
+  border-radius: 24px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.15rem 0.2rem;
+  cursor: pointer;
+}
+
+.list__frame {
+  border-radius: 22px 22px 0 0;
+  overflow: hidden;
+  flex: 1;
+}
+.list__details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list__details > div {
+  display: flex;
+  flex-direction: column;
+}
+.list__headshot {
+  max-width: 100%;
+  height: 100%;
+  transition: transform 0.05s ease-in;
+}
+.list__title {
+  padding: 0.5rem 0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.list__subtitle {
+  font-style: italic;
+  color: #aaa;
+}
+.list__subtitle--special {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #9900cc;
+  padding: 0.5rem 1rem 0;
+  min-height: 2.7rem;
+}
+.list__subtitle--alt {
+  font-size: 0.8rem;
+  color: #333;
+  padding: 0.5rem 1rem 0;
+  min-height: 2rem;
+  background-color: #f9f9f9;
+}
+.list__subtitle--alt:last-of-type {
+  padding-bottom: 1rem;
+  border-radius: 0 0 24px 24px;
+}
+
+.list__card:hover .list__headshot {
+  transform: rotate(-30deg) scale(2);
+}
+
+@media screen and (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(auto-fit, minmax(45vw, max-content));
+  }
+  .list__card {
+    max-width: 44vw;
+    flex-direction: row;
+  }
+  .list__frame {
+    border-radius: 22px 0 0 22px;
+    border-right: 1px solid #f2f2f2;
+  }
+  .list__subtitle--alt + .list__subtitle--alt {
+    border-radius: 0 0 24px 0;
+  }
+}

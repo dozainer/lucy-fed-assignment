@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": -1,
+      "name": "Rick Sanchez",
+      "origin": {
+        "name": "mock",
+        "url": "https://rickandmortyapi.com/api/location/90210"
+      },
+      "location": {
+        "name": "mock",
+        "url": "https://rickandmortyapi.com/api/location/42"
+      }
+    }
+  ]
+}
